@@ -40,9 +40,25 @@ const signupHandler = async (event) => {
   }
 };
 
-document.querySelector(".login-form").addEventListener("sumbit", loginHandler);
-document.querySelector(".signup-form").addEventListener("submit", signupHandler);
+// set the query selector for assign the form ID to a variable, check if the formid = 
+document.querySelector("#form").addEventListener("submit", async (event) => {
+  event.preventDefault();
+  // set the formid
+  const formId = document.querySelector("#form").id;
+  // if the formid = login-form set the event listener to the asyncronous loginHandler
+  if (formId === "login-form") {
+    await loginHandler(event);
+  } else if (formId === "signup-form") {
+    // else set the event listener to signupHandler
+    await signupHandler(event);
+  }
+});
 
+// if the user clicks on switch to signup, change the form id to signup form
+// change the form title
+// change the button text
+// hide the switch to signup prompt
+// show the switch to login prompt
 document.querySelector("#switch-to-signup").addEventListener("click", (event) => {
   event.preventDefault();
   document.querySelector("#form").id = "signup-form";
@@ -52,6 +68,11 @@ document.querySelector("#switch-to-signup").addEventListener("click", (event) =>
   document.querySelector("#switch-to-login").style.display = "inline";
 });
 
+// if user clicks on switch to login, then change the form id to login-form
+// change the title content to login
+// change the button content to login
+// display the switch to signup promp
+// hide the siwtch to login prompt
 document.querySelector("#switch-to-login").addEventListener("click", (event) => {
   event.preventDefault();
   document.querySelector("#form").id = "login-form";
