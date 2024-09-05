@@ -19,8 +19,9 @@ User.init(
     login: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
-    passowrd: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -37,7 +38,7 @@ User.init(
     },
     sequelize,
     timestamps: false,
-    freezeTableName: true,
+    freezeTableName: false,
     underscored: true,
     modelName: "user",
   }

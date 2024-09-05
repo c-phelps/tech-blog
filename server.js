@@ -1,4 +1,4 @@
-const path = requiere("path");
+const path = require("path");
 const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
@@ -13,8 +13,8 @@ const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({ helpers });
 
-const session = {
-  secret: "",
+const sess = {
+  secret: "adaeaxaefagragr42fwsaf2",
   cookie: {
     maxAge: 24 * 60 * 60 * 1000,
   },

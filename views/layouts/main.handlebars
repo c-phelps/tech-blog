@@ -13,14 +13,15 @@
         Tech Blog
       </h1>
       {{#if logged_in}}
-        <nav>
+        <nav>          
+          <button class="btn" id="home">Home</button>
           <button class="btn" id="logout">Logout</button>
           <button class="btn" id="dashboard">Dashboard</button>
         </nav>
       {{else}}
         <nav>
+          <button class="btn" id="home">Home</button>
           <button class="btn" id="login">Login</button>
-          <button class="btn" id="dashboard">Dashboard</button>
         </nav>
       {{/if}}
     </header>
@@ -30,11 +31,11 @@
     <footer>
 
     </footer>
-    {{!-- if the user is logged in, provide queryselector to the logout button --}}
+    {{! if the user is logged in, provide queryselector to the logout button }}
     {{#if logged_in}}
       <script src="/js/logOut.js"></script>
     {{else}}
-    {{!-- if the user is logged out, provide queryselector to the login button --}}
+      {{! if the user is logged out, provide queryselector to the login button }}
       <script src="/js/logIn.js"></script>
     {{/if}}
   </body>

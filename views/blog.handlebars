@@ -1,0 +1,10 @@
+<section class="card" data-blog-id="{{blog.id}}" data-blog-user="{{blog.user}}">
+  <header>{{blog.title}} By: {{blog.user}}</header>
+  <p>{{blog.body}}</p>
+  {{#if is_user}}
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit" id="edit-blog">Edit</button>
+    </div>
+    <script src="/js/blog.js"></script>
+  {{/if}}
+</section>
