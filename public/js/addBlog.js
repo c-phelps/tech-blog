@@ -20,4 +20,6 @@ const postBlog = async (event) => {
   }
 };
 
-document.querySelector("#add-blog-form").addEventListener("submit", postBlog);
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#add-blog-form").addEventListener("submit", postBlog);
+});

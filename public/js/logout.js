@@ -17,6 +17,8 @@ const dashboard = async () => {
   document.location.replace("/dashboard");
 };
 
-document.querySelector("#logout").addEventListener("click", logout);
-document.querySelector("#home").addEventListener("click", home);
-document.querySelector("#dashboard").addEventListener("click", dashboard);
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#logout").addEventListener("click", logout);
+  document.querySelector("#home").addEventListener("click", home);
+  document.querySelector("#dashboard").addEventListener("click", dashboard);
+});

@@ -2,4 +2,6 @@ const addBlog = async () => {
   document.location.replace("/addBlog");
 };
 
-document.querySelector("#add-blog").addEventListener("click", addBlog);
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#add-blog").addEventListener("click", addBlog);
+});

@@ -20,4 +20,6 @@ const editBlog = async (event) => {
   }
 };
 
-document.querySelector("#edit-blog-form").addEventListener("submit", editBlog);
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#edit-blog-form").addEventListener("submit", editBlog);
+});

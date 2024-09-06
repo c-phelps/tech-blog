@@ -4,5 +4,8 @@ const logIn = async () => {
 const home = async () => {
   document.location.replace("/");
 };
-document.querySelector("#login").addEventListener("click", logIn);
-document.querySelector("#home").addEventListener("click", home);
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#login").addEventListener("click", logIn);
+  document.querySelector("#home").addEventListener("click", home);
+});
