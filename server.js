@@ -12,7 +12,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({ helpers });
-
+const fs = require("fs");
+console.log("logIn.js exists:", fs.existsSync(path.join(__dirname, "public/js/logIn.js")));
 const sess = {
   secret: "adaeaxaefagragr42fwsaf2",
   cookie: {
